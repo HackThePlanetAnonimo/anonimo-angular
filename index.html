@@ -3,6 +3,8 @@
     
     <head>
         
+        <base href="/" />
+        
         <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
         <link type="text/css" rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
         
@@ -12,6 +14,7 @@
         <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
         
         <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/landingpage/landingpagecontroller.js"></script>
         
         <title>Anonimo</title>
         
@@ -21,5 +24,9 @@
         <div>
             {{anonimo.yolo}}
         </div>
+        
+        
+        <div ng-view></div>
+        
     </body>
 </html>
