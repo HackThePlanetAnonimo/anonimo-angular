@@ -5,7 +5,8 @@
         'ngAnimate',
         'ngRoute',
         'landingpage',
-        'nav'
+        'nav',
+        'account'
     ]);
 
     anonimo.config(['$routeProvider','$locationProvider',
@@ -16,9 +17,12 @@
             templateUrl: 'app/landingpage/landingpage.html',
             controller: 'LandingPageController as lpCtrl'
           }).
+          when('/account', {
+            templateUrl: 'app/account/account.html',
+            controller: 'AccountController as account'
+          }).
           when('/404', {
-            templateUrl: '404/404.html',
-            controller: 'SearchController as search'
+            templateUrl: '404/404.html'
           }).
           otherwise({
             redirectTo: '/404'

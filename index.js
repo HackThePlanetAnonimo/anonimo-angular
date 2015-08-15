@@ -3,7 +3,7 @@ var express = require("express"),
     port = 5000,
     publicDir = process.argv[2] || __dirname;
 
-app.get("/", function (req, res) {
+app.get('/', function (req, res) {
   res.sendfile("index.html");
 });
 
