@@ -28,10 +28,11 @@
     <body ng-controller="NavController as nav">
         <div class="container-fluid nav">
             <div class="pull-left">
-                <div class="brand">
+                <!-- <div class="brand">
                     Anonimo
-                </div>
-                <ul>
+                </div> -->
+                <br>
+                <ul class="list-inline" style="padding-left: 20px;">
                     <li ng-repeat="item in nav.items" ng-if="item.state">
                         <a ng-href="{{item.link}}">
                             {{item.name}}
