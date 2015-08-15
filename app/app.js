@@ -5,6 +5,7 @@
         'ngAnimate',
         'ngRoute',
         'landingpage'
+        'nav'
     ]);
 
     anonimo.config(['$routeProvider','$locationProvider',
