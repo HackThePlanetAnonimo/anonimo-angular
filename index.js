@@ -6,6 +6,15 @@ var express = require("express"),
 app.get('/', function (req, res) {
   res.sendfile("index.html");
 });
+app.get('/account', function (req, res) {
+  res.sendfile("index.html");
+});
+app.get('/questions', function (req, res) {
+  res.sendfile("index.html");
+});
+app.get('/login', function (req, res) {
+  res.sendfile("index.html");
+});
 
 app.use(express.static(publicDir));
 

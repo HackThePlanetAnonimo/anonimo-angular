@@ -7,7 +7,10 @@
     
         var account = this;
         
-        account.holla ="test";
-    
+        account.hasClass =true;
+        account.name = 
+            
+            
+            
     })
 })()
