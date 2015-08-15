@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html ng-app>
-<head>
-	<script src="http://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
-	<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
-	<script type="text/javascript" src="anonimo"></script>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-</head>
-<body>
-	<div ng-controller="anonimoCtrl">
-		{{totalAnonimos}}
-	</div>
-</body>
+<html ng-app="anonimo">
+    
+    <head>
+        
+        <title>Anonimo</title>
+        
+    </head>
+    
+    <body ng-controller="AnonimoController as anonimo">
+        <div>
+            {{anonimo.yolo}}
+        </div>
+    </body>
 </html>
