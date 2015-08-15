@@ -22,8 +22,16 @@
     </head>
     
     <body ng-controller="NavController as nav">
-        <div>
-            {{nav.cool}}
+        <div class="container-fluid nav">
+            <div class=".pull-left">
+                <ul>
+                    <li ng-repeat="item in nav.items" ng-if="item.state">
+                        <a ng-href="{{item.link}}">
+                            {{item.name}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         
         

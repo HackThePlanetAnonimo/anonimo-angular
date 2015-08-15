@@ -7,7 +7,7 @@
     nav.controller('NavController', function(){
         var nav = this;
         
-        nav.cool = "ht";
+        nav.items = [{"name":"Account","link":"account", "state":true},{"name":"Ask a Question","link":"questions", "state":true},{"name":"Login","link":"login", "state":true}];
     })
     
 })()

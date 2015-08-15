@@ -4,7 +4,7 @@
     var anonimo = angular.module("anonimo", [
         'ngAnimate',
         'ngRoute',
-        'landingpage'
+        'landingpage',
         'nav'
     ]);
 
@@ -13,7 +13,7 @@
         $locationProvider.html5Mode(true).hashPrefix('!');
         $routeProvider.
           when('/', {
-            templateUrl: 'landingpage/landingpage.html',
+            templateUrl: 'app/landingpage/landingpage.html',
             controller: 'LandingPageController as lpCtrl'
           }).
           when('/404', {
