@@ -1,18 +1,49 @@
 (function(){
     'use strict';
     
-    var account = angular.module('account', ["ngResource"])
+    var account = angular.module('account', [])
     
-    account.controller('AccountController', ["$resource","$scope", function($resource, $scope){
-    
-        var account = this;
-        var Account = $resource('/account/:accountId')
-        $scope.emails = [];
+    account.controller('AccountController', ["$scope", function($scope){
         
-        account.addemail = function (){
-            $scope.emails.push(account.newemail);
-        }
-        
-        account = Account.get({accountID:1});    
     }])
 })()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//(function(){
+//    'use strict';
+//    
+//    var account = angular.module('account', ["ngResource"])
+//    
+//    account.controller('AccountController', ["$resource","$scope", function($resource, $scope){
+//    
+//        var account = this;
+//        var Account = $resource('/account/:accountId')
+//        $scope.emails = [];
+//        
+//        $scope.addemail = function (){
+//            console.log("yo");
+//            $scope.emails.push(account.newemail)
+//        }
+//        
+//        account = Account.get({accountID:1});    
+//    }])
+//})()
