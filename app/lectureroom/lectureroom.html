@@ -1,4 +1,22 @@
 <div ng-controller="LectureroomController">
-    <div class="container" style="color:#fff">
+    <div class="container">
+    	<h3>No. of students in the lecture room: {{allStudentsIdsInLecture.length}}</h3>
+    	<h3>Lecture Name: {{currentLecture.Name}}</h3>
+    	<!-- <h3>Professor Name: </h3> -->
+    	<p ng-show="currentLectureQuestions.length == 0">There are no questions in this lecture room so far!</p>
+    	<p ng-show="currentLectureQuestions.length > 0">
+        Here is the list of accumulated questions</p>
+
+        <div class="panel panel-primary">
+            <div ng-repeat="q in currentLectureQuestions">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{q.Text}}</h3>
+                </div>
+                <div class="panel-body">
+                    No. of votes: {{q.Votes}}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+

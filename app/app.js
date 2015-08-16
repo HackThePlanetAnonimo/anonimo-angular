@@ -6,6 +6,7 @@
         'ngRoute',
         'landingpage',
         'lectureroom',
+        'mylectures',
         'nav',
         'account'
     ]);
@@ -25,6 +26,10 @@
           when('/lectureroom', {
             templateUrl: 'app/lectureroom/lectureroom.html',
             controller: 'LectureroomController as lectureroom'
+          }).
+          when('/mylectures', {
+            templateUrl: 'app/mylectures/mylectures.html',
+            controller: 'MylecturesController as mylectures'
           }).
           when('/404', {
             templateUrl: '404/404.html'

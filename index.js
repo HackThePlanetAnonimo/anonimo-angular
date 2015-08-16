@@ -18,7 +18,9 @@ app.get('/login', function (req, res) {
 app.get('/lectureroom', function (req, res) {
   res.sendfile("index.html");
 });
-
+app.get('/mylectures', function (req, res) {
+  res.sendfile("index.html");
+});
 app.use(express.static(publicDir));
 
 console.log("server showing %s listening at %s", publicDir, port);

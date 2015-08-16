@@ -24,15 +24,16 @@
         <script type="text/javascript" src="app/nav/navcontroller.js"></script>
         <script type="text/javascript" src="app/landingpage/landingpagecontroller.js"></script>
         <script type="text/javascript" src="app/lectureroom/lectureroomcontroller.js"></script>
+        <script type="text/javascript" src="app/mylectures/mylecturescontroller.js"></script>
         <script type="text/javascript" src="app/account/accountcontroller.js"></script>
 
         <title>Anonimo</title>
         
     </head>
     
-    <body ng-controller="NavController as nav" class="maincontent">
+    <body ng-controller="NavController as nav">
         
-        <nav class="navbar navbar-default navbarcolor">
+        <nav class="navbar navbar-inverse navbar-fixed">
           <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -60,7 +61,7 @@
                 </li>
               </ul>
 
-                <form ng-hide="nav.state" class="navbar-form navbar-left" ng-submit="nav.login()">
+<!--                 <form ng-hide="nav.state" class="navbar-form navbar-left" ng-submit="nav.login()">
                 <div class="form-group">
                 <input type="email" class="form-control" placeholder="Email" ng-model="nav.user">
                 <input type="password" class="form-control" placeholder="Password" ng-model="nav.pass">
@@ -71,7 +72,7 @@
 
                 <ul class="nav navbar-nav navbar-right" ng-show="nav.state">
                     <li ng-click="nav.signout()"><a>Sign Out</a></li>
-                  </ul>
+                  </ul> -->
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>

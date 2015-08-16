@@ -1,43 +1,71 @@
-<div ng-controller="LandingPageController">
+<div ng-controller="LandingPageController"> <!-- class="maincontent"-->
     <div class="container-fluid centeringlol text-center">
 
-    <h1 class="text-center signuph1">Tagline goes here</h1>
+    <h1 class="text-center signuph1" style="margin-top: -50px;">Ask questions during lecture anonymously!</h1>
 
-    <div ng-show="showSignIn">
-        <h2 class="text-center signuph1">Sign In!</h2>
-        <div ng-show="showButtons">
-            <div class="btn btn-default btnsignup" ng-click="setMode(true)">
-                I am a Professor
-            </div>
-            <div class="btn btn-default btnsignup" ng-click="setMode(false)">
-                I am a Student
+    <div class="jumbotron" style="padding-bottom: 150px;">
+        <div ng-show="showSignIn">
+            <h2 class="text-center">Sign In!</h2>
+            <div ng-show="showButtons">
+                <div class="btn btn-primary btn-lg" ng-click="setMode(true)">
+                    I am a Professor
+                </div>
+                <div class="btn btn-primary btn-lg" ng-click="setMode(false)">
+                    I am a Student
+                </div>
             </div>
         </div>
-    </div>
-        
-    <div ng-show="!showSignIn">
-        <h2 class="text-center signuph1">Sign Up!</h2>
-        <div ng-show="showButtons">
-            <button class="btn btn-default btnsignup" ng-click="setMode(true)">
-                I am a Professor
-            </button>
-            <button class="btn btn-default btnsignup" ng-click="setMode(false)">
-                I am a Student
-            </button>
-        </div>
-    </div>
-    
-    <span>Dont have an account? Create one <a href="#" ng-click="showSignIn = false">here!</a></span>
-    <div ng-show="!showButtons">
-        <form class="navbar-form navbar-left" ng-submit="signUp()" >
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name" ng-model="name">
-                <input type="email" class="form-control" placeholder="Email" ng-model="email">
-                <input type="password" class="form-control" placeholder="Password" ng-model="password">
-                <br>
-                <button type="submit" class="btn btn-default" style="margin-top: 10px">Sign up</button>
+                
+        <div ng-show="!showSignIn">
+            <h2 class="text-center">Sign Up!</h2>
+            <div ng-show="showButtons">
+                <button class="btn btn-primary btn-lg" ng-click="setMode(true)">
+                    I am a Professor
+                </button>
+                <button class="btn btn-primary btn-lg" ng-click="setMode(false)">
+                    I am a Student
+                </button>
             </div>
-        </form>    
+        </div>
+            
+        <span>Dont have an account? Create one <a href="#" ng-click="showSignIn = false">here!</a></span>
+        <div ng-show="!showButtons">
+            <div ng-show="showSignIn">
+                <form class="navbar-form navbar-left" ng-submit="signIn()" >
+                    <div class="form-group">
+                    <div class="row" style="margin-top: 10px; width: 100%">
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Email" ng-model="email">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="password" class="form-control" placeholder="Password" ng-model="password">
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-success btn-lg" style="margin-top: 10px">Sign in</button>
+                    </div>
+                </form> 
+            </div> 
+            <div ng-show="!showSignIn">
+                <form class="navbar-form navbar-left" ng-submit="signUp()" >
+                    <div class="form-group">
+                    <div class="row" style="margin-top: 10px; width: 100%">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" placeholder="Name" ng-model="name">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="email" class="form-control" placeholder="Email" ng-model="email">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="password" class="form-control" placeholder="Password" ng-model="password">
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-success btn-lg" style="margin-top: 10px">Sign up</button>
+                    </div>
+                </form> 
+            </div>   
+        </div>
     </div>
 </div>
 </div>

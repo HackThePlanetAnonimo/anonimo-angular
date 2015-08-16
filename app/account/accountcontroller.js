@@ -16,7 +16,7 @@
                 $scope.allStudentsEverCreated = res.data.results;
             }, function(res) {
                 alert(res);
-            })
+            });
         }
         $scope.newLectureName;
 
