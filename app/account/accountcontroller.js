@@ -8,7 +8,7 @@
         var account = this;
         
         account.hasClass =true;
-        account.name = 
+        // account.name = 
             
             
             
