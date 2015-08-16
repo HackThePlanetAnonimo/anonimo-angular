@@ -2,9 +2,9 @@
     
     'use strict';
     
-    var accountservices = angular.module('accountservices', [])
+    var accountservices = angular.module('accountservices', ["ngResource"])
     
-    accountservices.factory()
-
-
+    accountservices.factory('ac', ["", function(){
+         
+    }])
 })()

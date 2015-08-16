@@ -6,7 +6,8 @@
         'ngRoute',
         'landingpage',
         'nav',
-        'account'
+        'account',
+        'login'
     ]);
 
     anonimo.config(['$routeProvider','$locationProvider',
@@ -21,6 +22,10 @@
             templateUrl: 'app/account/account.html',
             controller: 'AccountController as account'
           }).
+          when('/login', {
+            templateUrl: 'app/login/login.html',
+            controller: 'LoginController as login'
+        }).
           when('/404', {
             templateUrl: '404/404.html'
           }).
