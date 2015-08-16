@@ -34,6 +34,7 @@
                         alert("Email already exists");
                     }
                     console.log(res);
+                    
                 }, function(res){
                     console.log(res);
 
