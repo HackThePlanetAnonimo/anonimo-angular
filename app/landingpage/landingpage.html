@@ -1,17 +1,33 @@
 <div ng-controller="LandingPageController">
     <div class="container-fluid centeringlol">
 
-    <h1 class="text-center signuph1">Sign Up</h1>
+    <h1 class="text-center signuph1">Tagline goes here</h1>
 
-    <div ng-show="showButtons">
-        <div class="btn btn-default btnsignup" ng-click="setSignUpMode(true)">
-            I am a Professor
+    <div ng-show="showSignIn">
+        <h2 class="text-center signuph1">Sign In!</h2>
+        <div ng-show="showButtons">
+            <div class="btn btn-default btnsignup" ng-click="setMode(true)">
+                I am a Professor
+            </div>
+            <div class="btn btn-default btnsignup" ng-click="setMode(false)">
+                I am a Student
+            </div>
         </div>
-        <div class="btn btn-default btnsignup" ng-click="setSignUpMode(false)">
-            I am a Student
+    </div>
+        
+    <div ng-show="!showSignIn">
+        <h2 class="text-center signuph1">Sign Up!</h2>
+        <div ng-show="showButtons">
+            <button class="btn btn-default btnsignup" ng-click="setMode(true)">
+                I am a Professor
+            </button>
+            <button class="btn btn-default btnsignup" ng-click="setMode(false)">
+                I am a Student
+            </button>
         </div>
     </div>
     
+    <span>Dont have an account? Create one <a href="#" ng-click="showSignIn = false">here!</a></span>
     <div ng-show="!showButtons">
         <form class="navbar-form navbar-left" ng-submit="signUp()" >
             <div class="form-group">
