@@ -6,6 +6,10 @@
         <base href="/" />
         
         <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+                        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
         <link type="text/css" rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
         
         <link type="stylesheet/less" rel="stylesheet/less" href="styles/main.less" />
@@ -20,7 +24,6 @@
         <script type="text/javascript" src="app/nav/navcontroller.js"></script>
         <script type="text/javascript" src="app/landingpage/landingpagecontroller.js"></script>
         <script type="text/javascript" src="app/account/accountcontroller.js"></script>
-        <script type="text/javascript" src="app/login/logincontroller.js"></script>
 
         <title>Anonimo</title>
         
@@ -28,19 +31,46 @@
     
     <body ng-controller="NavController as nav" class="maincontent">
         
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbarcolor">
           <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-              <a class="navbar-brand" href="/">Anonimo</a>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                  <a class="navbar-brand brand" href="/">Anonimo</a>
             </div>
-            <div class="collapse navbar-collapse">
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li ng-repeat="item in nav.items" ng-if="item.state" class="nav-item">
-                    <a ng-href="{{item.link}}">
-                        {{item.name}}
+                <li ng-show="nav.state" class="nav-item">
+                    <a href="/account">
+                        Account
+                    </a>
+                </li>
+                <li ng-show="nav.state" class="nav-item">
+                    <a href="/questions">
+                        Ask a Question
                     </a>
                 </li>
               </ul>
+
+                <form ng-hide="nav.state" class="navbar-form navbar-left" ng-submit="nav.login()">
+                <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" ng-model="nav.user">
+                <input type="password" class="form-control" placeholder="Password" ng-model="nav.pass">
+                </div>
+                <button type="submit" class="btn btn-default">Log in</button>
+                </form>
+
+
+                <ul class="nav navbar-nav navbar-right" ng-show="nav.state">
+                    <li ng-click="nav.signout()"><a>Sign Out</a></li>
+                  </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>

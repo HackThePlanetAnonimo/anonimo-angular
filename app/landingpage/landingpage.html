@@ -1,9 +1,22 @@
-<div class="container-fluid">
+<div class="container-fluid centeringlol">
 
-    <div class="jumbotron">
-        <h1>A platform for anonymous in-class questions</h1>
-        <p>Accelerate your class's learning with Anonimo</p>
+    <h1 class="text-center signuph1">Sign Up</h1>
+
+    <div class="btn btn-default btnsignup" ng-hide="landingpage.signupstatus" ng-click="landingpage.signup('prof')">
+        I am a Professor
     </div>
     
+    <div class="btn btn-default btnsignup" ng-hide="landingpage.signupstatus" ng-click="landingpage.signup('student')">
+        I am a Student
+    </div>
     
+<!--
+                    <form ng-show="landingpage.signupstatus" class="navbar-form navbar-left" ng-submit="nav.login()" >
+                <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" ng-model="nav.user">
+                <input type="password" class="form-control" placeholder="Password" ng-model="nav.pass">
+                </div>
+                <button type="submit" class="btn btn-default">Log in</button>
+                </form>    
+-->
 </div>
