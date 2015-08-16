@@ -21,7 +21,7 @@
                 var id = res.data.Professor_id;
                 // get id and pass it
 
-                $location.url("/account/?type='professor'&id="+id);
+                alert("Your question will be answered shortly!");
                 }
             }, function(res){
                 console.log(res);
