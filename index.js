@@ -15,6 +15,9 @@ app.get('/questions', function (req, res) {
 app.get('/login', function (req, res) {
   res.sendfile("index.html");
 });
+app.get('/lectureroom', function (req, res) {
+  res.sendfile("index.html");
+});
 
 app.use(express.static(publicDir));
 

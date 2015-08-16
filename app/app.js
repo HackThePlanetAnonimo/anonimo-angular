@@ -5,6 +5,7 @@
         'ngAnimate',
         'ngRoute',
         'landingpage',
+        'lectureroom',
         'nav',
         'account'
     ]);
@@ -20,6 +21,10 @@
           when('/account', {
             templateUrl: 'app/account/account.html',
             controller: 'AccountController as account'
+          }).
+          when('/lectureroom', {
+            templateUrl: 'app/lectureroom/lectureroom.html',
+            controller: 'LectureroomController as lectureroom'
           }).
           when('/404', {
             templateUrl: '404/404.html'

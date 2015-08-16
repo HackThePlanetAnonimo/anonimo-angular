@@ -1,20 +1,24 @@
-<div class="container">
-    <div class="row" style="color:#fff">
-        <div class="col-xs-12">
-            <ul>
-                <li ng-repeat="email in emails">
-                    {{email.address}}
-                </li>
-            </ul>
-                
-            
-            <form ng-hide="nav.state" class="navbar-form navbar-left" ng-submit="addemail()">
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" ng-model="account.newemail">
+<div ng-controller="AccountController">
+    <div class="container" style="color:#fff">
+    <p>Hey Prof, to go to a lecture room, you may either add a new lecture or select an existing lecture</p>
+    <div class="row">
+        <div class="col-xs-6">
+            <h3>Add a Lecture</h3>
+<!--             <form>
+                <label>Name: <input type="text" ng-model="newLectureName" placeholder="CS101"></label>
+                <label>Students:<br>
+                <div ng-repeat="c in allStudentsEverCreated">
+                    <label><input type="checkbox" ng-value="l" name="Name" ng-model="selectedLecture"> {{l['Name']}}</label>
                 </div>
-                
-                <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
-            </form>
+            </form> -->
         </div>
+        <div class="col-xs-6">
+            <h3>Select a Lecture</h3>
+            <div ng-repeat="l in lectures">
+                <label><input type="radio" ng-value="l" name="Name" ng-model="selectedLecture"> {{l['Name']}}</label>
+            </div>
+            <button ng-click="selectLecture()" class="btn btn-success" style="margin-top: 10px">Select</button>
+        </div>
+    </div>
     </div>
 </div>
