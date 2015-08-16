@@ -14,7 +14,16 @@
             $scope.isProf = mode;
         }      
 
-        $scope.signUp = function(){
+        $scope.getAllStudents = function() {
+            $http.get('https://vast-earth-4742.herokuapp.com/get_all_students').then(function(res){
+                console.log(res);
+            }, function(res) {
+                console.log(res);
+            })
+        }
+
+        $scope.signUp = function() {
+
             if ($scope.isProf){
                 $http.post('https://vast-earth-4742.herokuapp.com/professor_sign_up', {
                     "Email": $scope.email,
