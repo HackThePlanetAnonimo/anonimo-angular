@@ -1,3 +1,3 @@
-## anonimo-angular
+# Anonimo-Angular
 
-A web-based platform to enable students and professors to better understand class content.
+A Angular web-app providing a platform for students and professors to ask and vote for questions during class conversations.
